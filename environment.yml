@@ -1,9 +1,12 @@
-name: dockerfile-env
+# environment.yml
+name: my-env
 channels:
- - conda-forge
+  - conda-forge
+  - defaults
 dependencies:
- - python=3.9
- - pandas=2.0.3
- - scikit-learn=1.3.0
- - mamba<=1.5.8 
- - conda<24.0.0
+- pandas=2.2.2
+- pandera=0.20.4
+- python=3.11
+- pip
+- pip:
+    - deepchecks==0.18.1
