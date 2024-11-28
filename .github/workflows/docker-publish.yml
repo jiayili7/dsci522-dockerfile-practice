@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'Dockerfile'
+      - 'conda-linux-64.lock'
   workflow_dispatch:
 
 jobs:
@@ -26,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: YOUR_DOCKERHUB_USERNAME/dsci522-dockerfile-practice
+          images: jl7ubcdocker/dsci522-dockerfile-practice
           
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
