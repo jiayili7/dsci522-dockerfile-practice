@@ -7,6 +7,6 @@ RUN conda init bash && \
     . /opt/conda/etc/profile.d/conda.sh && \
     conda activate base && \
     conda install --quiet --file /tmp/conda-linux-64.lock && \
-    conda clean --all -y -f \
+    conda clean --all -y -f && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
